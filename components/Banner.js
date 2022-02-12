@@ -13,7 +13,7 @@ import "swiper/css/autoplay"
 
 export default function Banner() {
     return (
-        <div className="flex w-full my-2">
+        <div className="flex w-full my-0 lg:my-2">
             <Swiper
                 modules={[Navigation, Autoplay, Pagination]}
                 spaceBetween={50}
@@ -27,16 +27,16 @@ export default function Banner() {
                 onSwiper={(swiper) => console.log(swiper)}
             >
                 <SwiperSlide>
-                    <Image src={banner1} alt="Banner 1" className="rounded-lg" />
+                    <Image src={banner1} alt="Banner 1" className="rounded-none lg:rounded-lg" />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <Image src={banner2} alt="Banner 2" className="rounded-lg" />
+                    <Image src={banner2} alt="Banner 2" className="rounded-none lg:rounded-lg" />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <Image src={banner3} alt="Banner 3" className="rounded-lg" />
+                    <Image src={banner3} alt="Banner 3" className="rounded-none lg:rounded-lg" />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <Image src={banner4} alt="Banner 3" className="rounded-lg" />
+                    <Image src={banner4} alt="Banner 3" className="rounded-none lg:rounded-lg" />
                 </SwiperSlide>
                 ...
             </Swiper>
