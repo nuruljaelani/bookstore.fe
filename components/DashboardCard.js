@@ -2,7 +2,7 @@ import { AiOutlineBook, AiOutlineMoneyCollect, AiOutlineUser, AiOutlineUserSwitc
 
 export default function DashboardCard() {
     return (
-        <section className="flex container px-10 my-24 space-x-8">
+        <div className="flex container space-x-8">
             <div className="rounded-2xl basis-1/4 shadow-lg bg-gradient-to-r from-blue-300 to-purple-300 flex flex-col p-4 space-y-2">
                 <div className="flex items-center space-x-2">
                     <AiOutlineBook className="text-4xl text-blue-600" />
@@ -31,6 +31,6 @@ export default function DashboardCard() {
                 </div>
                 <p className="text-3xl font-semibold text-emerald-700">13.250.000</p>
             </div>
-        </section>
+        </div>
     )
 }
