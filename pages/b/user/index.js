@@ -13,12 +13,10 @@ export default function Index() {
 
     const data = React.useMemo(() => [
         {
-            name: 'Fihi Ma fihi',
-            author: 'Jalaludin Rumi'
+            name: 'Fihi Ma fihi'
         },
         {
-            name: 'Fihi Ma fihi',
-            author: 'Jalaludin Rumi'
+            name: 'Fihi Ma fihi'
         }
     ], [])
 
@@ -26,10 +24,6 @@ export default function Index() {
         {
             Header: 'Name',
             accessor: 'name'
-        },
-        {
-            Header: 'Author',
-            accessor: 'author'
         }
     ], [])
 
@@ -39,12 +33,12 @@ export default function Index() {
 
     return (
         <Layout>
-            <p className="text-white text-3xl font-bold">Produk</p>
-            <div className="bg-white shadow-md rounded-2xl p-4 my-6 flex flex-col space-y-4">
-                <Link href="/b/product/create" passHref={true}>
+            <p className="text-white text-3xl font-bold">User</p>
+            <div className="bg-white rounded-2xl p-4 my-6 flex flex-col space-y-4">
+                <Link href="/b/category/create" passHref={true}>
                     <a>
                         <ButtonAdd>
-                            Tambah Produk
+                            Add User
                         </ButtonAdd>
                     </a>
                 </Link>

@@ -1,5 +1,6 @@
 /* eslint-disable react/jsx-key */
 import ButtonAdd from "@components/Button/ButtonAdd"
+import ButtonSave from "@components/Button/ButtonSave"
 import Link from "next/link"
 import { useRouter } from "next/router"
 import React from "react"
@@ -13,12 +14,10 @@ export default function Index() {
 
     const data = React.useMemo(() => [
         {
-            name: 'Fihi Ma fihi',
-            author: 'Jalaludin Rumi'
+            name: 'Fihi Ma fihi'
         },
         {
-            name: 'Fihi Ma fihi',
-            author: 'Jalaludin Rumi'
+            name: 'Fihi Ma fihi'
         }
     ], [])
 
@@ -26,10 +25,6 @@ export default function Index() {
         {
             Header: 'Name',
             accessor: 'name'
-        },
-        {
-            Header: 'Author',
-            accessor: 'author'
         }
     ], [])
 
@@ -39,15 +34,26 @@ export default function Index() {
 
     return (
         <Layout>
-            <p className="text-white text-3xl font-bold">Produk</p>
-            <div className="bg-white shadow-md rounded-2xl p-4 my-6 flex flex-col space-y-4">
-                <Link href="/b/product/create" passHref={true}>
-                    <a>
-                        <ButtonAdd>
-                            Tambah Produk
-                        </ButtonAdd>
-                    </a>
-                </Link>
+            <p className="text-white text-3xl font-bold">Mutasi</p>
+            <div className="bg-white rounded-2xl p-4 my-6 flex flex-col space-y-4">
+                <div className="flex flex-col space-y-4">
+                    <p className="text-lg font-semibold">Filter</p>
+                    <div className="flex">
+                        <form className="flex space-x-4">
+                            <div className="flex items-center space-x-2">
+                                <label className="text-sm font-medium">Tanggal Awal</label>
+                                <input type="date" className="bg-white outline-none rounded-lg border p-2" />
+                            </div>
+                            <div className="flex items-center space-x-2">
+                                <label className="text-sm font-medium">Tanggal Akhir</label>
+                                <input type="date" className="bg-white outline-none rounded-lg border p-2" />
+                            </div>
+                            <ButtonSave>
+                                Cari
+                            </ButtonSave>
+                        </form>
+                    </div>
+                </div>
                 <table {...getTableProps()} className="w-full text-left">
                     <thead>
                         {headerGroups.map(headerGroup => (

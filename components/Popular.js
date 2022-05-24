@@ -11,6 +11,7 @@ import book6 from "public/books/berdikaribook_I_2019_Feb_10_02_11_55.jpg"
 import "swiper/css"
 import "swiper/css/navigation"
 import "swiper/css/autoplay"
+import { FaStar } from "react-icons/fa";
 
 export default function Popular() {
     return (
@@ -29,56 +30,92 @@ export default function Popular() {
                     onSwiper={(swiper) => console.log(swiper)}
                 >
                     <SwiperSlide>
-                        <div className="flex flex-col space-y-2 border border-gray-300">
+                        <div className="flex flex-col space-y-2 border shadow rounded bg-white">
                             <Image src={book1} alt="" />
                             <div className="flex flex-col space-y-2 p-2">
-                                <p className="font-semibold tracking-tight">Lorem ipsum dolor sit amet consectetur</p>
-                                <p className="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores quo ipsam itaque qui consectetur</p>
+                                <p className="font-semibold tracking-tight leading-4 text-gray-700">Lorem ipsum dolor sit amet consectetur</p>
+                                <div className="flex items-center space-x-2">
+                                    <FaStar className="text-yellow-500 text-sm" />
+                                    <p className="text-sm font-semibold">4.6</p>
+                                    <p>|</p>
+                                    <p className="text-sm font-semibold text-gray-600">Tejual 30</p>
+                                </div>
+                                <p className="font-semibold text-gray-700">Rp 75.000</p>
                             </div>
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <div className="flex flex-col space-y-2 border border-gray-300">
+                        <div className="flex flex-col space-y-2 border shadow rounded bg-white">
                             <Image src={book2} alt="" />
                             <div className="flex flex-col space-y-2 p-2">
-                                <p className="font-semibold tracking-tight">Lorem ipsum dolor sit amet consectetur</p>
-                                <p className="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores quo ipsam itaque qui consectetur</p>
+                                <p className="font-semibold tracking-tight leading-4 text-gray-700">Lorem ipsum dolor sit amet consectetur</p>
+                                <div className="flex items-center space-x-2">
+                                    <FaStar className="text-yellow-500 text-sm" />
+                                    <p className="text-sm font-semibold">4.6</p>
+                                    <p>|</p>
+                                    <p className="text-sm font-semibold text-gray-600">Tejual 30</p>
+                                </div>
+                                <p className="font-semibold text-gray-700">Rp 75.000</p>
                             </div>
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <div className="flex flex-col space-y-2 border border-gray-300">
+                        <div className="flex flex-col space-y-2 border shadow rounded bg-white">
                             <Image src={book3} alt="" />
                             <div className="flex flex-col space-y-2 p-2">
-                                <p className="font-semibold tracking-tight">Lorem ipsum dolor sit amet consectetur</p>
-                                <p className="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores quo ipsam itaque qui consectetur</p>
+                                <p className="font-semibold tracking-tight leading-4 text-gray-700">Lorem ipsum dolor sit amet consectetur</p>
+                                <div className="flex items-center space-x-2">
+                                    <FaStar className="text-yellow-500 text-sm" />
+                                    <p className="text-sm font-semibold">4.6</p>
+                                    <p>|</p>
+                                    <p className="text-sm font-semibold text-gray-600">Tejual 30</p>
+                                </div>
+                                <p className="font-semibold text-gray-700">Rp 75.000</p>
                             </div>
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <div className="flex flex-col space-y-2 border border-gray-300">
+                        <div className="flex flex-col space-y-2 border shadow rounded bg-white">
                             <Image src={book4} alt="" />
                             <div className="flex flex-col space-y-2 p-2">
-                                <p className="font-semibold tracking-tight">Lorem ipsum dolor sit amet consectetur</p>
-                                <p className="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores quo ipsam itaque qui consectetur</p>
+                                <p className="font-semibold tracking-tight leading-4 text-gray-700">Lorem ipsum dolor sit amet consectetur</p>
+                                <div className="flex items-center space-x-2">
+                                    <FaStar className="text-yellow-500 text-sm" />
+                                    <p className="text-sm font-semibold">4.6</p>
+                                    <p>|</p>
+                                    <p className="text-sm font-semibold text-gray-600">Tejual 30</p>
+                                </div>
+                                <p className="font-semibold text-gray-700">Rp 75.000</p>
                             </div>
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <div className="flex flex-col space-y-2 border border-gray-300">
+                        <div className="flex flex-col space-y-2 border shadow rounded bg-white">
                             <Image src={book5} alt="" />
                             <div className="flex flex-col space-y-2 p-2">
-                                <p className="font-semibold tracking-tight">Lorem ipsum dolor sit amet consectetur</p>
-                                <p className="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores quo ipsam itaque qui consectetur</p>
+                                <p className="font-semibold tracking-tight leading-4 text-gray-700">Lorem ipsum dolor sit amet consectetur</p>
+                                <div className="flex items-center space-x-2">
+                                    <FaStar className="text-yellow-500 text-sm" />
+                                    <p className="text-sm font-semibold">4.6</p>
+                                    <p>|</p>
+                                    <p className="text-sm font-semibold text-gray-600">Tejual 30</p>
+                                </div>
+                                <p className="font-semibold text-gray-700">Rp 75.000</p>
                             </div>
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <div className="flex flex-col space-y-2 border border-gray-300">
+                        <div className="flex flex-col space-y-2 border shadow rounded bg-white">
                             <Image src={book6} alt="" />
                             <div className="flex flex-col space-y-2 p-2">
-                                <p className="font-semibold tracking-tight">Lorem ipsum dolor sit amet consectetur</p>
-                                <p className="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores quo ipsam itaque qui consectetur</p>
+                                <p className="font-semibold tracking-tight leading-4 text-gray-700">Lorem ipsum dolor sit amet consectetur</p>
+                                <div className="flex items-center space-x-2">
+                                    <FaStar className="text-yellow-500 text-sm" />
+                                    <p className="text-sm font-semibold">4.6</p>
+                                    <p>|</p>
+                                    <p className="text-sm font-semibold text-gray-600">Tejual 30</p>
+                                </div>
+                                <p className="font-semibold text-gray-700">Rp 75.000</p>
                             </div>
                         </div>
                     </SwiperSlide>

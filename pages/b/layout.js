@@ -12,13 +12,13 @@ export default function Layout({ children }) {
             </Head>
 
             <div className="flex flex-col">
-                <main className="flex">
+                <main className="flex relative">
                     <Sidebar />
-                    <section className="basis-4/5 relative bg-gray-100">
+                    <section className="basis-4/5 bg-gray-100 relative">
                         <div className="bg-gradient-to-r from-teal-400 to-blue-700 h-[250px] absolute inset-0">
                             <Topbar />
                         </div>
-                        <section className="flex flex-col mt-32 relative px-6 space-y-6">
+                        <section className="flex flex-col mt-32 mb-20 relative px-6 space-y-6">
                             {children}
                         </section>
                     </section>

@@ -13,18 +13,18 @@ import "swiper/css/autoplay"
 
 export default function Banner() {
     return (
-        <div className="flex w-full my-0 lg:my-2">
+        <div className="flex w-full my-0 md:my-4 lg:my-6">
             <Swiper
                 modules={[Navigation, Autoplay, Pagination]}
-                spaceBetween={50}
-                slidesPerView={1}
+                spaceBetween={10}
+                slidesPerView={2}
                 autoplay={{
                     delay: 3000,
                     disableOnInteraction: false
                 }}
                 pagination={true}
-                onSlideChange={() => console.log('slide change')}
-                onSwiper={(swiper) => console.log(swiper)}
+                centeredSlides={true}
+                loop={true}
             >
                 <SwiperSlide>
                     <Image src={banner1} alt="Banner 1" className="rounded-none lg:rounded-lg" />
