@@ -1,13 +1,12 @@
 /* eslint-disable react/jsx-key */
 import ButtonAdd from "@components/Button/ButtonAdd"
-import ButtonSave from "@components/Button/ButtonSave"
-import Modal from "@components/Modal"
 import { Dialog, Transition } from "@headlessui/react"
 import React, { useState, Fragment } from "react"
+import { useQuery } from "@tanstack/react-query"
 import { useTable } from "react-table"
 import Layout from "../layout"
 
-export default function Index() {
+export default function Index({categories}) {
 
     const [modal, setModal] = useState(false)
 
@@ -15,14 +14,7 @@ export default function Index() {
         setModal(!modal)
     }
 
-    const data = React.useMemo(() => [
-        {
-            name: 'Fihi Ma fihi'
-        },
-        {
-            name: 'Fihi Ma fihi'
-        }
-    ], [])
+    const data = React.useMemo(() => categories, [categories])
 
     const columns = React.useMemo(() => [
         {
@@ -119,13 +111,15 @@ export default function Index() {
                                     as="h3"
                                     className="text-lg font-medium leading-6 text-gray-900"
                                 >
-                                    Payment successful
+                                    Add Category
                                 </Dialog.Title>
                                 <div className="mt-2">
-                                    <p className="text-sm text-gray-500">
-                                        Your payment has been successfully submitted. We’ve sent you
-                                        an email with all of the details of your order.
-                                    </p>
+                                    <form>
+                                        <div className="flex flex-col">
+                                            <label className="text-sm font-medium text-gray-500">Name</label>
+                                            <input type="text" className="bg-white rounded-md border focus:outline-none p-2" />
+                                        </div>
+                                    </form>
                                 </div>
 
                                 <div className="mt-4">
@@ -134,7 +128,7 @@ export default function Index() {
                                         className="inline-flex justify-center px-4 py-2 text-sm font-medium text-blue-900 bg-blue-100 border border-transparent rounded-md hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500"
                                         onClick={toggleModal}
                                     >
-                                        Got it, thanks!
+                                        Save
                                     </button>
                                 </div>
                             </div>
@@ -144,4 +138,18 @@ export default function Index() {
             </Transition>
         </Layout >
     )
+}
+
+export async function getServerSideProps(context) {
+
+    const res = await fetch("http://go-app:8080/api/v1/categories")
+    const response = await res.json()
+    const categories = response.data
+    console.log(categories)
+
+    return {
+        props: {
+            categories
+        }
+    }
 }
